@@ -1,0 +1,92 @@
+<% layout('/layouts/boilerplate') -%>
+  <div class="container my-4 d-flex flex-column align-items-center justify-content-center">
+    <div class="text-start">
+      <h1 class="mb-4">Edit Listing</h1>
+    </div>
+    <div class="row justify-content-center">
+      <div class="card shadow">
+        <div class="card-body">
+          <form method="POST" action="/listings/<%= listing.id %>?_method=PUT" class="row g-3 needs-validation"
+            novalidate enctype="multipart/form-data">
+            <!-- Form fields for title, location, country, and price -->
+            <div class="col-12 col-md-6">
+              <div class="mb-3">
+                <label for="title" class="form-label"><i class="fa-solid fa-pen-to-square"></i> Title</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="title" name="listing[title]" value="<%= listing.title %>"
+                    required />
+                  <div class="invalid-feedback">
+                    Please enter a title.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="location" class="form-label"><i class="fa-solid fa-pen-to-square"></i> Location</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="location" name="listing[location]"
+                    value="<%= listing.location %>" required />
+                  <div class="invalid-feedback">
+                    Please enter a location.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="country" class="form-label"><i class="fa-solid fa-pen-to-square"></i> Country</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="country" name="listing[country]"
+                    value="<%= listing.country %>" required />
+                  <div class="invalid-feedback">
+                    Please enter a country.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label"><i class="fa-solid fa-pen-to-square"></i> Price (INR)</label>
+                <div class="input-group has-validation">
+                  <input type="number" class="form-control" id="price" name="listing[price]"
+                    value="<%= listing.price %>" required />
+                  <div class="invalid-feedback">
+                    Please enter a price.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image upload and display -->
+            <div class="col-12 col-md-6 ps-3">
+              <div class="mb-3 mt-4 text-center text-md-start">
+                <img src="<%= listing.image.url %>" class="img-fluid rounded" alt="<%= listing.image.filename %>"
+                  style="max-width: 313px; height: auto;" />
+              </div>
+              <div class="mb-3 mt-4 col-lg-6">
+                <label for="image" class="form-label"><i class="fa-solid fa-pen-to-square"></i> Upload New Image</label>
+                <div class="input-group has-validation">
+                  <input type="file" class="form-control" id="image" name="listing[image]" />
+                  <div class="invalid-feedback">
+                    Please upload a photo.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="col-12 mb-3">
+              <label for="description" class="form-label"><i class="fa-solid fa-pen-to-square"></i> Description</label>
+              <div class="input-group has-validation">
+                <textarea class="form-control text-dark" id="description" name="listing[description]" rows="3"
+                  required><%= listing.description %></textarea>
+                <div class="invalid-feedback">
+                  Please enter a description.
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="col-12">
+              <button type="submit" class="btn btn-col">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

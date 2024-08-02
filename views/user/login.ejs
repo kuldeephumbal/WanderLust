@@ -1,0 +1,38 @@
+<% layout('/layouts/boilerplate') -%>
+    <div class="container my-4 d-flex flex-column align-items-center justify-content-center">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-10 col-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h1 class="text-center mb-3">Login</h1>
+                        <form action="/login" method="POST" class="row g-3 needs-validation" novalidate>
+                            <div class="col-12">
+                                <label for="username" class="form-label">Username</label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" id="username" name="username" required />
+                                    <div class="invalid-feedback">
+                                        Please enter a Username.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="password" class="form-label">Password</label>
+                                <div class="input-group has-validation">
+                                    <input type="password" class="form-control" id="password" name="password" required />
+                                    <div class="invalid-feedback">
+                                        Please enter a password.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-col">Login</button>
+                            </div>
+                            <div class="col-12">
+                                <span>Don't have an account?&nbsp;</span><a href="/signup" class="link-col">sign up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
