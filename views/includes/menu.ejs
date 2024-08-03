@@ -26,17 +26,17 @@
               <a class="nav-link" href="/listings/new">Add listing</a>
             </li>
           </ul>
-          <ul class="navbar-nav">
+          <ul class="navbar-nav nav-pad">
             <% if(!currentUser) { %>
-              <li class="nav-item">
-                <a class="nav-link btn btn-in me-1 mb-1" href="/signup">Sign up</a>
+              <li class="nav-item pb-1 pe-2">
+                <a class="nav-link btn btn-in" href="/signup">Sign up</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link btn btn-in mb-1" href="/login">Login</a>
+              <li class="nav-item pb-1 pe-2">
+                <a class="nav-link btn btn-in" href="/login">Login</a>
               </li>
             <% } %>
             <% if(currentUser) { %>
-              <li class="nav-item">
+              <li class="nav-item pb-1">
                 <a class="nav-link btn btn-col" href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
               </li>
             <% } %>

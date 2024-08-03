@@ -24,6 +24,8 @@ app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 
 const db = process.env.ATLASDB_URL;
+// const mongoDB = "mongodb://127.0.0.1:27017/wanderLust";
+
 
 main()
 .then(() => {
@@ -50,6 +52,7 @@ const store = MongoStore.create({
 
 // Session & Cookie Configuration
 const sessionConfig = {
+    store,
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
@@ -86,8 +89,8 @@ app.get("/home", (req, res) => {
 });
 
 //Routes
-app.use("/listings", listingRoutes);
-app.use("/listings/:id/reviews", reviewRoutes);
+app.use("/", listingRoutes);
+app.use("/", reviewRoutes);
 app.use("/", userRoutes);
 
 //All Error Handler

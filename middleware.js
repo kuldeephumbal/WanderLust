@@ -1,3 +1,4 @@
+// middleware.js
 const Listing = require("./models/listing");
 const Review = require("./models/review");
 const ExpressError = require("./utils/expressError.js");
@@ -6,12 +7,14 @@ const { listingSchema, reviewSchema } = require("./schema.js");
 module.exports.saveRedirectUrl = (req, res, next) => {
     if (req.session.redirectUrl) {
         res.locals.redirectUrl = req.session.redirectUrl;
+        delete req.session.redirectUrl; // Clear the redirect URL after use
     }
     next();
 };
 
 module.exports.isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
+        // console.log(`Not authenticated, redirecting from ${req.originalUrl}`);
         req.session.redirectUrl = req.originalUrl;
         req.flash("warning", "Please log in to continue.");
         return res.redirect("/login");
