@@ -23,8 +23,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 
-// const db = process.env.ATLASDB_URL;
-const mongoDB = "mongodb://127.0.0.1:27017/wanderLust";
+const db = process.env.ATLASDB_URL;
+// const mongoDB = "mongodb://127.0.0.1:27017/wanderLust";
 
 
 main()
@@ -34,7 +34,7 @@ main()
 .catch((err) => console.log(err));
 
 async function main() {
-await mongoose.connect(mongoDB);
+await mongoose.connect(db);
 }
 
 const store = MongoStore.create({
