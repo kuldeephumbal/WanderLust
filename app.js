@@ -23,8 +23,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 
-const db = process.env.ATLASDB_URL;
-// const mongoDB = "mongodb://127.0.0.1:27017/wanderLust";
+// const db = process.env.ATLASDB_URL;
+const mongoDB = "mongodb://127.0.0.1:27017/wanderLust";
 
 
 main()
@@ -34,16 +34,16 @@ main()
 .catch((err) => console.log(err));
 
 async function main() {
-await mongoose.connect(db);
+await mongoose.connect(mongoDB);
 }
 
-const store = MongoStore.create({
-    mongoUrl: db,
-    crypto: {
-        secret: process.env.SECRET,
-    },
-    touchAfter: 24 * 3600,
-});
+// const store = MongoStore.create({
+//     mongoUrl: db,
+//     crypto: {
+//         secret: process.env.SECRET,
+//     },
+//     touchAfter: 24 * 3600,
+// });
 
 // store.on("error", function (e) {
 //     console.log("Session Store Error", e);
@@ -52,7 +52,7 @@ const store = MongoStore.create({
 
 // Session & Cookie Configuration
 const sessionConfig = {
-    store,
+    // store,
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
