@@ -21,7 +21,7 @@ main{
 }
 
 .fa-compass{
-    color: #FF385C;
+    color: #ee2b47;
     font-size: 2.5rem;
 }
 
@@ -55,36 +55,108 @@ main{
     object-fit: cover;
     border-radius: 1rem;
 }
+.card-padding{
+    padding: 1rem;
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+}
+.review-text{
+    margin-bottom: 0.5rem;
+}
 
 /* btn */
 .btn-col{
     color:#fff !important;
-    background-color: #FF385C !important;
+    background-color: #ee2b47 !important;
 }
 .btn-in{
-    color: #FF385C !important;
+    color: #ee2b47 !important;
     background-color: #fff !important;
-    border: 1px solid #FF385C !important;
+    border: 1px solid #ee2b47 !important;
 }
 .btn-in:hover{
     color: #fff !important;
-    background-color: #FF385C !important;
+    background-color: #ee2b47 !important;
     border: 1px solid #fff !important;
 }
 
 /* Form */
 .link-col{
-    color: #FF385C !important;
+    color: #ee2b47 !important;
     text-decoration: underline !important;
 }
 
 .heading-col{
-    color: #FF385C;
+    color: #ee2b47;
 }
 
 .bor{
     border-radius: 0.7rem;
 }
+
+/* stars */
+.star-rating {
+    display: flex;
+    gap: 2px;
+  }
+
+  .fa-star {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+  }
+
+  .fa-star.checked {
+    color: #ffc107;
+  }
+
+  /* Styling for stars in the review cards */
+  .small-rating .fa-star {
+    font-size: 1.2rem;
+    /* Smaller size for review cards */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .star-rating {
+      font-size: 1rem;
+    }
+
+    .small-rating .fa-star {
+      font-size: 1rem;
+      /* Smaller size for mobile view */
+    }
+
+    .card-body {
+      padding: 1rem;
+      padding-top: 0.2rem !important;
+      padding-bottom: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      padding-left: 0.5rem !important;
+
+    }
+  }
+
+/* reviews card  */
+.starability-result {
+    font-size: 1rem; /* Adjust this value to make the stars smaller */
+  }
+
+  .review-item {
+    display: flex;
+    align-items:end;
+    justify-content: space-between;
+  }
+
+  .review-author {
+    font-size: 1.2rem; /* Adjust the font size if needed */
+  }
+
+  .delete-button {
+    margin-left: auto;
+  }
 
 /* Footer */
 .f-main{

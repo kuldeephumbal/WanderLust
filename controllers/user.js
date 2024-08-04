@@ -26,7 +26,7 @@ module.exports.renderLogin = (req, res) => {
 };
 
 module.exports.login = async (req, res) => {
-  req.flash("success", "Welcome back! You are now logged in.");
+  req.flash("success", "Welcome! You are now logged in.");
   let redirectUrl = res.locals.redirectUrl || "/listings";
   res.redirect(redirectUrl);
 };
