@@ -1,24 +1,200 @@
-<footer class="mt-5 bg-white">
-  <div class="f-main d-flex justify-content-center align-items-center">
+<footer class="bg-white">
+  <div class="d-flex justify-content-center align-items-center">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-12 text-center">
           <div class="f-s-links">
-              <a href="#" class="btn btn-links"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#" class="btn btn-links"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#" class="btn btn-links"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-      </div>
+            <a href="#" class="btn btn-links"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="btn btn-links"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="btn btn-links"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
         <div class="col-lg-4 col-12 d-flex justify-content-center align-items-center">
-          <div class="f-brand">&copy;copyright WanderLust</div>
+          <div class="f-brand">&copy;2024 WanderLust</div>
         </div>
         <div class="col-lg-4 col-12 text-center">
           <div class="f-links">
-              <a href="#" class="btn btn-links">Terms</a>
-              <a href="#" class="btn btn-links">Privacy Policy</a>
-              <a href="#" class="btn btn-links">FAQ</a>
+            <!-- Button trigger modal -->
+            <a href="#" class="btn btn-links" data-bs-toggle="modal" data-bs-target="#termsModal">Terms</a>
+
+            <!-- Terms and Conditions Modal -->
+            <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header btn-col">
+                    <h1 class="modal-title fs-5" id="termsModalLabel">Terms and Conditions</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <h5>1. Acceptance of Terms</h4>
+                      <p>By accessing and using WanderLust, you accept and agree to be bound by these Terms and
+                        Conditions and our Privacy Policy. If you do not agree with any part of these terms, you
+                        should not use our website.</p>
+
+                      <h5>2. User Accounts</h4>
+                        <ul>
+                          <li><strong>Registration:</strong> To access certain features, including adding and
+                            managing
+                            listings and reviews, you must create an account with WanderLust.</li>
+                          <li><strong>Account Responsibility:</strong> You are responsible for maintaining the
+                            confidentiality of your login information and for all activities that occur under your
+                            account. Notify us immediately of any unauthorized use of your account.</li>
+                        </ul>
+
+                        <h5>3. Listings and Reviews</h4>
+                          <ul>
+                            <li><strong>User-Generated Content:</strong> Users can add listings of places and write
+                              reviews. By submitting content, you grant WanderLust a non-exclusive, royalty-free,
+                              perpetual, and worldwide license to use, display, and distribute the content.</li>
+                            <li><strong>Content Moderation:</strong> We reserve the right to review, edit, or remove
+                              any
+                              content that violates our policies or is deemed inappropriate.</li>
+                            <li><strong>Ownership:</strong> Users can only delete their own listings and reviews.
+                              You
+                              cannot delete or alter listings or reviews added by other users.</li>
+                          </ul>
+
+                          <h5>4. Prohibited Activities</h4>
+                            <p>You agree not to:</p>
+                            <ul>
+                              <li>Post or transmit any content that is illegal, defamatory, obscene, or harmful.
+                              </li>
+                              <li>Use WanderLust for any unlawful or unauthorized purpose.</li>
+                              <li>Engage in any activity that interferes with or disrupts the functionality of the
+                                website.
+                              </li>
+                            </ul>
+
+                            <h5>5. Limitation of Liability</h4>
+                              <p>WanderLust is not liable for any damages arising from the use or inability to use
+                                the
+                                website, including any errors or omissions in the content. We do not endorse or
+                                guarantee the
+                                accuracy of user-generated content.</p>
+
+                              <h5>6. Changes to Terms</h4>
+                                <p>We may update these Terms and Conditions from time to time. Changes will be
+                                  posted on this
+                                  page with an updated effective date. Your continued use of the website constitutes
+                                  your
+                                  acceptance of any changes.</p>
+
+                                <h5>7. Contact Us</h4>
+                                  <p>If you have any questions about these Terms and Conditions, please contact us
+                                    at <a href="mailto:support@wanderlust.com">support@wanderlust.com</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <a href="#" class="btn btn-links" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy
+              Policy</a>
+
+            <!-- Privacy Policy Modal -->
+            <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content text-start">
+                  <div class="modal-header btn-col">
+                    <h1 class="modal-title fs-5" id="privacyModalLabel">Privacy Policy</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h5>1. Information We Collect</h4>
+                      <ul>
+                        <li><strong>Personal Information:</strong> When you create an account, we collect personal
+                          details such as your name, email address, and login credentials.</li>
+                        <li><strong>User-Generated Content:</strong> We collect content you submit, including
+                          listings
+                          and reviews.</li>
+                      </ul>
+
+                      <h5>2. Use of Information</h4>
+                        <ul>
+                          <li><strong>Account Management:</strong> We use your information to provide and manage
+                            your
+                            account, including processing listings and reviews.</li>
+                          <li><strong>Communication:</strong> We may use your contact details to send you updates or
+                            respond to your inquiries.</li>
+                        </ul>
+
+                        <h5>3. Data Security</h4>
+                          <p>We implement reasonable security measures to protect your information. However, no
+                            method of
+                            transmission over the internet or electronic storage is 100% secure.</p>
+
+                          <h5>4. Sharing of Information</h4>
+                            <ul>
+                              <li><strong>Third-Party Services:</strong> We may share your information with
+                                third-party
+                                service providers who assist us in operating the website.</li>
+                              <li><strong>Legal Requirements:</strong> We may disclose your information if required
+                                by law
+                                or to protect our rights.</li>
+                            </ul>
+              
+                              <h5>5. Changes to Privacy Policy</h4>
+                                <p>We may update this Privacy Policy from time to time. Changes will be posted on
+                                  this page with
+                                  an updated effective date.</p>
+
+                                <h5>6. Contact Us</h4>
+                                  <p>For questions about this Privacy Policy, please contact us at <a
+                                      href="mailto:support@wanderlust.com">support@wanderlust.com</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <a href="#" class="btn btn-links" data-bs-toggle="modal" data-bs-target="#faqModal">FAQ</a>
+
+            <!-- FAQ Modal -->
+            <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content text-start">
+                  <div class="modal-header btn-col">
+                    <h1 class="modal-title fs-5" id="faqModalLabel">Frequently Asked Questions (FAQ)</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h5>1. How do I create an account on WanderLust?</h4>
+                      <p>To create an account, click on the “Sign Up” button on the top right corner of the homepage
+                        and provide the required information.</p>
+
+                      <h5>2. How can I add a listing?</h4>
+                        <p>Once logged in, go to the “Add Listing” page from your account dashboard and fill in the
+                          details of the place you want to suggest.</p>
+
+                        <h5>3. Can I delete my own listings and reviews?</h4>
+                          <p>Yes, you can delete any listings and reviews you have created. You cannot delete or
+                            alter
+                            content submitted by other users.</p>
+
+                          <h5>4. How do I edit my listing?</h4>
+                            <p>Log in to your account, go to your dashboard, and select the listing you
+                              want to
+                              edit. Make the necessary changes and save them.</p>
+
+                              <h5>6. How can I contact WanderLust support?</h4>
+                                <p>For support, please email us at <a
+                                    href="mailto:support@wanderlust.com">support@wanderlust.com</a>. We will get
+                                  back to you as
+                                  soon as possible.</p>
+
+                                <h5>7. Is my personal information safe?</h4>
+                                  <p>We implement reasonable security measures to protect your personal information.
+                                    For more
+                                    details, please review our Privacy Policy.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
+        </div>
       </div>
     </div>
-  </div>
 </footer>
